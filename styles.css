@@ -1,1 +1,41 @@
+body {
 
+	background-color : #DAFFFB;
+	color : black;
+}
+
+h1 {
+  font-size: 30px;
+  color: #0000aa;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+h3 {
+  font-size: 15px;
+  text-align: center;
+}
+
+a:link { 
+	color : red; 
+} 
+
+/* ---- couleur du lien visité ---- */
+a:visited {
+	color : #04563d;
+} 
+
+/* ---- couleur du lien lorsqu'il est survolé ---- */
+a:hover { 
+	color : #ff2bd8;
+} 
+
+.surligné {
+	background-color : #fff656;
+	font-weight : bold;
+}
