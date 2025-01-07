@@ -1,0 +1,33 @@
+body {
+
+	background-image : url(fond.pdf);
+	color : black;
+	font-family: "Gill Sans", sans-serif;
+}
+
+
+h1 {
+  font-size: 30px;
+  color: #3D0330;
+  text-align: center;
+  
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 3px 5px #60DED1;
+  font-style: italic ;
+  
+}
+
+h3 {
+  text-align: center;
+}
+
+
+.bouton {
+	background-color : #24B426 ;
+	font-size : 20px;
+	
+}
