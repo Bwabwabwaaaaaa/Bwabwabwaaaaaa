@@ -1,36 +1,41 @@
 //On initialise des variables compteurs qui vont stocker le nombre de réponses correspondant au profil
-var psycopathe=0;
-var sociopathe=0;
-var nevropathe=0;
+var nevro=0;
+var psycho=0;
+var socio=0;
+
 
 
 //Fonction qui sera exécutée lors du clic sur le bouton valider du formulaire
 function valider() {
-	//On commence par récupérer la valeur du bouton radio qui a été coché par l'utilisateur 
-	var perso= document.getElementById("personalite");
-	var perso_choisi = perso.options[perso.selectedIndex].value;
+	//On commence par récupérer la valeur du menu déroulant qui a été selectionner par l'utilisateur 
+	 var perso = document.getElementById("perso");
+   	 var perso_choisi = perso.options[perso.selectedIndex].value;
+
+	}
 	
 	// Ensuite on ajoute la valeur dans la variable correspondante 
-	if(perso_choisi=="p")
+
+	if(perso_choisi=="n")
 	{
-		psycopathe=psycopathe+1;
+		nevro=nevro+1;
 	}
-	else if (perso_choisi=="s")
+	else if(perso_choisi=="p")
 	{
-		sociopathe=sociopathe+1;
+		psycho=psycho+1;
 	}
-	else 
+	else
 	{
-		nevropathe=nevropathe+1;
+		socio=socio+1;
 	}
 	
+	
 	//On regroupe les différents profils dans un tableau 
-	var valeurs=[psycopathe,sociopathe,nevropathe];
-	var profils=["Psycopathe, tu es quelqu'un qu'il faut tenir à l'écart de la sociétée","Sociopathe, tu est quelqu'un qu'il faut tenir à l'écart de la sociétée","Nevropathe, tu es triste, tu le sais et tu le fais savoir au monde"];
+	var valeurs=[nevro,psycho,socio];
+	var profils=["tu es névropathe","tu es psychopathe","tu es sociopathe"];
 	
 	//On cherche le maximum du tableau et son indice
 	var max = valeurs[0];
-    var indindice_du_max = 0;
+    var indice_du_max = 0;
     
     for (var i = 1; i < valeurs.length; i++) {
         if (valeurs[i] > max) {
@@ -40,6 +45,12 @@ function valider() {
     }
 	
 	//on affiche le profil qui a eu le maximum de réponses dans la balise à l'identifiant resultat
-	document.getElementById("resultat").innerHTML= "Félicitation ! Tu es un "+ profils[indice_du_max]
+	document.getElementById("resultat").innerHTML= "la sentence est tombée :"+ profils[indice_du_max];
 }
+
+
+function test() {
+	document.getElementById("teste").innerHTML= "sans blague"
+
+  }
 
